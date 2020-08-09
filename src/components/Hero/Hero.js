@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Hero = ({ title, imageSrc }) => {
+const Hero = ({ title, imageSrc, overlay }) => {
   return (
     <div
       className="relative w-full overflow-hidden"
       style={{
-        backgroundImage: `url(${imageSrc})`,
+        background: overlay ? `linear-gradient(180deg,rgba(0,0,0,.6) 0,rgba(0,0,0,.6)) ,url(${imageSrc})` : `url(${imageSrc})`,
         height: '350px',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'botton center',

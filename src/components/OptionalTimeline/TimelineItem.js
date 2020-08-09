@@ -39,37 +39,37 @@ const TimelineItem = ({ title, subtitle, date, content, image, imageAlt, reverse
       >
         <div className="flex-1">
           {!reverse &&
-            <div className="flex justify-end -mr-16 pt-8">
+            <div className="flex justify-end text-white -mr-16 pt-8">
               <div className="text-right mr-4">
-                <p className="text-2xl">{title}</p>
+                <p className="text-2xl text-primary">{title}</p>
                 <p className="text-xl">{subtitle}</p>
                 <p className="text-lg">{date}</p>
-                <p>{content}</p>
+                <p className="font-light">{content}</p>
               </div>
               <img 
                 src={image} 
-                alt="Café" 
-                className="w-32 h-32 rounded-full border-2 border-gray-600 z-40" 
+                alt={imageAlt} 
+                className="w-32 h-32 rounded-full border-2 border-primary z-40" 
               />
             </div>
           }
         </div>
 
-        <div className="bg-gray-500 w-1 z-10 h-auto" style={{ minWidth: '5px' }} />
+        <div className="bg-primary w-1 z-10 h-auto" style={{ minWidth: '5px' }} />
 
         <div className="flex-1">
           {reverse && 
-            <div className="flex flex-row-reverse justify-end -ml-16 pt-8">
+            <div className="flex flex-row-reverse text-white justify-end -ml-16 pt-8">
               <div className="text-left ml-4">
-                <p className="text-2xl">{title}</p>
+                <p className="text-2xl text-primary">{title}</p>
                 <p className="text-xl">{subtitle}</p>
                 <p className="text-lg">{date}</p>
-                <p>{content}</p>
+                <p className="font-light">{content}</p>
               </div>
               <img 
                 src={image} 
-                alt="Café" 
-                className="w-32 h-32 rounded-full border-2 border-gray-600 z-40" 
+                alt={imageAlt} 
+                className="w-32 h-32 rounded-full border-2 border-primary z-40" 
               />
             </div>
           }
@@ -89,17 +89,17 @@ const TimelineItem = ({ title, subtitle, date, content, image, imageAlt, reverse
         className="flex ml-8 md:hidden"
       >
         <div className="bg-gray-500 z-10 w-1 h-auto" style={{ minWidth: '5px', marginRight: '-3.2rem' }} />
-        <div className="flex justify-start pt-8">
+        <div className="flex justify-start text-white pt-8">
           <img 
             src={image} 
-            alt="Café" 
-            className="w-24 h-24 rounded-full border-2 border-gray-600 z-40" 
+            alt={imageAlt}
+            className="w-24 h-24 rounded-full border-2 border-primary z-40" 
           />
           <div className="text-left ml-4">
-            <p className="text-2xl">{title}</p>
+            <p className="text-2xl text-primary">{title}</p>
             <p className="text-xl">{subtitle}</p>
             <p className="text-lg">{date}</p>
-            <p>{content}</p>
+            <p className="font-light">{content}</p>
           </div>
         </div>
       </motion.div>

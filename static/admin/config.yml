@@ -127,7 +127,17 @@ collections:
           - {label: Imagem do cabeçalho, name: image, widget: image}
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Subtítulo", name: "subtitle", widget: "string"}
-          - {label: "Conteúdo", name: "body", widget: "markdown"}
+          - label: "Eventos" 
+            name: "eventos" 
+            widget: "list" 
+            fields: 
+              - {label: "Título", name: "title", widget: "string"} 
+              - {label: "Local", name: "local", widget: "string"}
+              - {label: "Descrição", name: "description", widget: "text"}
+              - {label: "Data/Período", name: "date", widget: "string"}
+              - {label: Imagem do Evento, name: image, widget: image}
+              - {label: "Legenda da Imagem", name: "imageAlt", widget: "string"}
+              
           - label: "SEO"
             name: seo
             widget: "object"

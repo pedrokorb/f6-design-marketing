@@ -36,9 +36,9 @@ const TemplateWrapper = ({ children, seo, opengraph }) => {
         <link
           rel="mask-icon"
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color="#ff4400"
+          color="#000"
         />
-        <meta name="theme-color" content="#fff" />
+        <meta name="theme-color" content="#000" />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={opengraph ? opengraph.title : title} />
@@ -49,7 +49,12 @@ const TemplateWrapper = ({ children, seo, opengraph }) => {
         />
       </Helmet>
       <NavBar />
-      <div>{children}</div>
+      <div
+        className="bg-black" 
+        // style={{ backgroundImage: 'linear-gradient(#000, #FFF)' }}
+      >
+        {children}
+      </div>
       {/* <Footer 
         title={contactSection.title}
         description={contactSection.description}
