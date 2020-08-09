@@ -1,9 +1,63 @@
 ---
-templateKey: index-page
-title: Testando site Jonathan
-image: /img/home-jumbotron.jpg
+topBanner:
+  title: Sua empresa já tem uma identidade?
+  subtitle: A F6 tem a solução!
+  bgImage: /img/mainbackground.jpg
+  overlay: true
+  button:
+    buttonText: Saiba Mais
+    buttonLink: https://google.com.br
+collectionPatiSection:
+  title: Coleção by Pati Ribeiro Design
+  description: Uma coleção que vai deixar você doido para clicar no botão abaixo!
+  mainImage:
+    image: /img/shirts.png
+    imageAlt: Coleção Pati
+  overlay: true
+  bgImage: /img/backgroundsection.jpg
 heading: Testando site Jonathan
 subheading: Support sustainable farming while enjoying a cup
+templateKey: index-page
+servicesSection:
+  title: Serviços
+  description: Nós oferecemos todos esses serviços para você
+  services:
+    - title: Marketing Digital
+      description: It is a long established fact that a reader will be distracted by
+        the readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using 'Content here, content here', making it
+        look like readable English.
+      icon:
+        image: /img/computer-1.svg
+        imageAlt: Marketing Digital
+    - title: Identidade Visual
+      description: It is a long established fact that a reader will be distracted by
+        the readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using 'Content here, content here', making it
+        look like readable English.
+      icon:
+        image: /img/pen-1.svg
+        imageAlt: Identidade Visual
+    - title: Segurança
+      description: It is a long established fact that a reader will be distracted by
+        the readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters, as opposed to using 'Content here, content here', making it
+        look like readable English.
+      icon:
+        image: /img/certificate-1.svg
+        imageAlt: Segurança
+seo:
+  title: F6 Design e Marketing
+  description: Identidade Visual e Marketing Digital para a sua empresa
+opengraph:
+  title: F6 Design e Marketing
+  description: Identidade Visual e Marketing Digital para a sua empresa
+  image:
+    imageUrl: /img/paticolecao.jpg
+    imageAlt: F6 Design e Marketing
 mainpitch:
   title: Why Kaldi
   description: >
@@ -11,11 +65,6 @@ mainpitch:
     shouldn't just taste good, it should do good too. We source all of our beans
     directly from small scale sustainable farmers and make sure part of the
     profits are reinvested in their communities.
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -51,6 +100,7 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
+title: Testando site Jonathan
 main:
   heading: Great coffee with no compromises
   description: >
@@ -67,4 +117,9 @@ main:
   image3:
     alt: Coffee beans
     image: /img/products-grid1.jpg
+image: /img/home-jumbotron.jpg
+description: Kaldi is the ultimate spot for coffee lovers who want to learn
+  about their java’s origin and support the farmers that grew it. We take coffee
+  production, roasting and brewing seriously and we’re glad to pass that
+  knowledge to anyone.
 ---
