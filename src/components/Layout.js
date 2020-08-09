@@ -1,13 +1,12 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer/Footer'
 import NavBar from './Navbar/NavBar'
 import './all.sass'
 import './layout.css'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children, seo, opengraph, contactSection }) => {
+const TemplateWrapper = ({ children, seo, opengraph }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -51,11 +50,11 @@ const TemplateWrapper = ({ children, seo, opengraph, contactSection }) => {
       </Helmet>
       <NavBar />
       <div>{children}</div>
-      <Footer 
+      {/* <Footer 
         title={contactSection.title}
         description={contactSection.description}
         contacts={contactSection.contacts}
-      />
+      /> */}
     </div>
   )
 }

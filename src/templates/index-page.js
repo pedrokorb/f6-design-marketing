@@ -6,6 +6,7 @@ import PartnersSection from '../components/ParternersSection/PartnersSection'
 import ServicesSection from '../components/ServicesSection/ServicesSection'
 import ImageToRight from '../components/CallToAction/ImageToRight'
 import MainBanner from '../components/Banner/MainBanner'
+import Footer from '../components/Footer/Footer'
 import Layout from '../components/Layout'
 
 const IndexPage = ({ data }) => {
@@ -23,7 +24,6 @@ const IndexPage = ({ data }) => {
     <Layout
       seo={seo}
       opengraph={opengraph}
-      contactSection={contactSection}
     >
       <MainBanner
         imageSrc={topBanner.bgImage.childImageSharp.fluid.src}
@@ -57,6 +57,12 @@ const IndexPage = ({ data }) => {
         title={partnersSection.title}
         description={partnersSection.description}
         partners={partnersSection.partners}
+      />
+
+      <Footer
+        title={contactSection.title}
+        description={contactSection.description}
+        contacts={contactSection.contacts}
       />
     </Layout>
   )
