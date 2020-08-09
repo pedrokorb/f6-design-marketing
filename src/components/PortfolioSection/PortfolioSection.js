@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion"
 const PortfolioSection = ({ title, description }) => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.25,
   })
 
   useEffect(() => {

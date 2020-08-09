@@ -15,6 +15,10 @@ import ImageToRight from '../components/CallToAction/ImageToRight'
 import PartnersSection from '../components/ParternersSection/PartnersSection'
 import PortfolioSection from '../components/PortfolioSection/PortfolioSection'
 
+import Computer from "../img/computer 1.svg"
+import Pen from "../img/pen 1.svg"
+import Trust from "../img/certificate 1.svg"
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -25,7 +29,7 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-    <MainBanner 
+    {/* <MainBanner 
       imageSrc={background}
       overlay
     />
@@ -51,7 +55,7 @@ export const IndexPageTemplate = ({
     <PartnersSection 
       title="Parceiros"
       description="Essas empresas confiaram no nosso trabalho e hoje colhem os resultados"
-    />
+    /> */}
 
     {/* <div
       className="full-width-image margin-top-0"
@@ -165,6 +169,23 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+  const services = [
+    {
+      icon: Computer,
+      title: "Marketing Digital",
+      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+    },
+    {
+      icon: Pen,
+      title: "Identidade Visual",
+      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+    },
+    {
+      icon: Trust,
+      title: "Segurança",
+      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+    },
+  ]
 
   return (
     <Layout>
@@ -189,6 +210,7 @@ const IndexPage = ({ data }) => {
       <ServicesSection
         title="Serviços"
         description="Nós oferecemos todos esses serviços para você"
+        services={services}
       />
 
       <ImageToRight

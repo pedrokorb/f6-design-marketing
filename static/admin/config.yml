@@ -34,15 +34,60 @@ collections:
                 fields:
                   - {label: Texto, name: buttonText, widget: string}
                   - {label: Link, name: buttonLink, widget: string}
-          
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+            
+          - label: Seção Serviços
+            name: servicesSection
+            widget: object
+            fields: 
+              - {label: Título, name: title, widget: string}
+              - {label: Descrição, name: description, widget: string}
+              - label: "Serviços" 
+                name: "services" 
+                widget: "list" 
+                fields: 
+                  - {label: "Título", name: "title", widget: "string"} 
+                  - {label: "Descrição", name: "description", widget: "text"}
+                  - label: "Ícone" 
+                    name: "icon" 
+                    widget: "object"
+                    fields:
+                      - {label: Imagem, name: image, widget: image}
+                      - {label: "Legenda do Ícone", name: "imageAlt", widget: "string"}
+
+          - label: Seção Coleção Pati
+            name: collectionPatiSection
+            widget: object
+            fields: 
+              - {label: Título, name: title, widget: string}
+              - {label: Descrição, name: description, widget: text}
+              - label: "Imagem em destaque" 
+                name: "mainImage" 
+                widget: "object"
+                fields:
+                  - {label: Imagem, name: image, widget: image}
+                  - {label: "Legenda da Imagem", name: "imageAlt", widget: "string"}
+              - {label: "Camada no Fundo", name: "overlay", widget: "boolean"}
+              - {label: Imagem de Fundo, name: bgImage, widget: image}
+
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+
+          - label: "OpenGraph"
+            name: opengraph
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+              - label: "Imagem"
+                name: image
+                widget: "object"
+                fields:
+                  - {label: "Imagem", name: imageUrl, widget: image}
+                  - {label: "Descrição da Imagem", name: imageAlt, widget: string}
           
       - file: "src/pages/about/index.md"
         label: "Sobre"
@@ -53,6 +98,25 @@ collections:
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Subtítulo", name: "subtitle", widget: "string"}
           - {label: "Conteúdo", name: "body", widget: "markdown"}
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+
+          - label: "OpenGraph"
+            name: opengraph
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+              - label: "Imagem"
+                name: image
+                widget: "object"
+                fields:
+                  - {label: "Imagem", name: imageUrl, widget: image}
+                  - {label: "Descrição da Imagem", name: imageAlt, widget: string}
 
       - file: "src/pages/projetos/index.md"
         label: "Projetos"
@@ -63,6 +127,25 @@ collections:
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Subtítulo", name: "subtitle", widget: "string"}
           - {label: "Conteúdo", name: "body", widget: "markdown"}
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+
+          - label: "OpenGraph"
+            name: opengraph
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+              - label: "Imagem"
+                name: image
+                widget: "object"
+                fields:
+                  - {label: "Imagem", name: imageUrl, widget: image}
+                  - {label: "Descrição da Imagem", name: imageAlt, widget: string}
 
       - file: "src/pages/propostas/index.md"
         label: "Propostas"
@@ -73,6 +156,25 @@ collections:
           - {label: "Título", name: "title", widget: "string"}
           - {label: "Subtítulo", name: "subtitle", widget: "string"}
           - {label: "Conteúdo", name: "body", widget: "markdown"}
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+
+          - label: "OpenGraph"
+            name: opengraph
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+              - label: "Imagem"
+                name: image
+                widget: "object"
+                fields:
+                  - {label: "Imagem", name: imageUrl, widget: image}
+                  - {label: "Descrição da Imagem", name: imageAlt, widget: string}
           
       - file: "src/pages/trajetoria/index.md"
         label: "Trajetória"
@@ -92,6 +194,26 @@ collections:
               - {label: "Data/Período", name: "date", widget: "string"}
               - {label: Imagem do Evento, name: image, widget: image}
               - {label: "Legenda da Imagem", name: "imageAlt", widget: "string"}
+          
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+
+          - label: "OpenGraph"
+            name: opengraph
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+              - label: "Imagem"
+                name: image
+                widget: "object"
+                fields:
+                  - {label: "Imagem", name: imageUrl, widget: image}
+                  - {label: "Descrição da Imagem", name: imageAlt, widget: string}
 
       - file: "src/pages/fotos/index.md"
         label: "Galeria de Fotos"
@@ -107,6 +229,47 @@ collections:
             fields: 
               - {label: "Título", name: "title", widget: "string"} 
               - {label: "Imagem", name: "image", widget: "image"}
+          
+          - label: "SEO"
+            name: seo
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+
+          - label: "OpenGraph"
+            name: opengraph
+            widget: "object"
+            fields:
+              - {label: "Título", name: title, widget: string}
+              - {label: "Descrição", name: description, widget: string}
+              - label: "Imagem"
+                name: image
+                widget: "object"
+                fields:
+                  - {label: "Imagem", name: imageUrl, widget: image}
+                  - {label: "Descrição da Imagem", name: imageAlt, widget: string}
+
+      - file: "src/pages/config/index.md"
+        label: "Configurações"
+        name: "config"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "config-page"}
+          - label: "Instagram" 
+            name: "instagram" 
+            widget: "object"
+            fields:
+              - {label: "Link Completo", name: "fullLink", widget: "string"}
+              - {label: "Username", name: "shortLink", widget: "string"}
+          - label: "Facebook" 
+            name: "facebook" 
+            widget: "object"
+            fields:
+              - {label: "Link Completo", name: "fullLink", widget: "string"}
+              - {label: "Username", name: "shortLink", widget: "string"}
+          - {label: "E-mail", name: "email", widget: "string"}
+          - {label: "Telefone", name: "phone", widget: "string"}
+          - {label: "Ícone da Navbar", name: "icon", widget: "image"}
       
       # - file: "src/pages/products/index.md"
       #   label: "Products Page"

@@ -1,16 +1,12 @@
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
-
-import Computer from "../../img/computer 1.svg"
-import Pen from "../../img/pen 1.svg"
-import Trust from "../../img/certificate 1.svg"
 import ServiceItem from "./ServiceItem"
 
-const ServicesSection = ({ title, description }) => {
+const ServicesSection = ({ title, description, services }) => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    threshold: 0.3,
+    threshold: 0.25,
   })
 
   useEffect(() => {
@@ -18,24 +14,6 @@ const ServicesSection = ({ title, description }) => {
       controls.start("visible")
     }    
   }, [controls, inView])
-
-  const services = [
-    {
-      icon: Computer,
-      title: "Marketing Digital",
-      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-    },
-    {
-      icon: Pen,
-      title: "Identidade Visual",
-      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-    },
-    {
-      icon: Trust,
-      title: "Segurança",
-      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-    },
-  ]
 
   return (
     <div id="services" className="mx-auto bg-black">
