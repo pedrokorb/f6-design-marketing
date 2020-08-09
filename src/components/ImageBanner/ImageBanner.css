@@ -1,0 +1,13 @@
+.banner {
+  @apply bg-transparent;
+  width: 100%;
+  height: auto;
+}
+
+@screen lg {
+  .banner {
+    @apply block;
+    max-height: 492px;
+    height: calc(100vh * 0.85);
+  }
+}
