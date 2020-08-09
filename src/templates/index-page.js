@@ -13,6 +13,7 @@ import bgImage from '../img/backgroundSection.jpg'
 import shirts from '../img/shirts.png'
 import ImageToRight from '../components/CallToAction/ImageToRight'
 import PartnersSection from '../components/ParternersSection/PartnersSection'
+import PortfolioSection from '../components/PortfolioSection/PortfolioSection'
 
 export const IndexPageTemplate = ({
   image,
@@ -42,11 +43,15 @@ export const IndexPageTemplate = ({
       backgroundImage={bgImage}
     />
 
+    <PortfolioSection 
+      title="Portfólio"
+      description="Conheça alguns dos trabalhos já realizados"
+    />
+
     <PartnersSection 
       title="Parceiros"
       description="Essas empresas confiaram no nosso trabalho e hoje colhem os resultados"
     />
-
 
     {/* <div
       className="full-width-image margin-top-0"
