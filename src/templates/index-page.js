@@ -168,7 +168,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
+      {/* <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -176,6 +176,37 @@ const IndexPage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+      /> */}
+      <MainBanner
+        imageSrc={background}
+        overlay
+        title="Sua empresa já tem uma identidade?"
+        subtitle="A F6 tem a solução!"
+        buttonText="Saiba Mais"
+        buttonLink="https://google.com"
+      />
+
+      <ServicesSection
+        title="Serviços"
+        description="Nós oferecemos todos esses serviços para você"
+      />
+
+      <ImageToRight
+        title="Coleção by Pati Ribeiro Design"
+        description="Uma coleção que vai deixar você doido para clicar no botão abaixo!"
+        image={shirts}
+        overlay
+        backgroundImage={bgImage}
+      />
+
+      <PortfolioSection
+        title="Portfólio"
+        description="Conheça alguns dos trabalhos já realizados"
+      />
+
+      <PartnersSection
+        title="Parceiros"
+        description="Essas empresas confiaram no nosso trabalho e hoje colhem os resultados"
       />
     </Layout>
   )

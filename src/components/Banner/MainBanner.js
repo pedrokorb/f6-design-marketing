@@ -20,13 +20,13 @@ const MainBanner = ({ overlay, imageSrc, title, subtitle, buttonText, buttonLink
     >
 
       <div className="flex flex-col px-10 mt-16 text-center">
-        <h1 className="text-4xl md:text-6xl font-light text-primary">Sua empresa já tem uma identidade?</h1>
-        <p className="text-white text-2xl md:text-4xl my-8">A F6 tem a solução!</p>
+        <h1 className="text-4xl md:text-6xl font-light text-primary">{title}</h1>
+        <p className="text-white text-2xl md:text-4xl my-8">{subtitle}</p>
       </div>
 
       <ExternalButton 
-        text="Saiba Mais"
-        link="https://www.google.com"
+        text={buttonText}
+        link={buttonLink}
         primary
         border
         rounded
