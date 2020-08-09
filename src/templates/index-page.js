@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import background from './../img/mainbackground.jpg'
 
 import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+// import Features from '../components/Features'
+// import BlogRoll from '../components/BlogRoll'
 import MainBanner from '../components/Banner/MainBanner'
 import ServicesSection from '../components/ServicesSection/ServicesSection'
 import bgImage from '../img/backgroundSection.jpg'

@@ -100,7 +100,7 @@ const NavBar = () => {
         <div className="hidden lg:block">
           <div className={`flex text-white`}>
             {links.map((link, index) => (
-              <Link key={index} to={link.value}>
+              <Link className="border-b-2 border-transparent hover:border-primary" key={index} to={link.value}>
                 <p className="px-2 hover:text-primary">{link.name}</p>
               </Link>
             ))}
@@ -116,7 +116,7 @@ const NavBar = () => {
               <div className="text-center">
                 <div className={`nav-links`}>
                   {links.map((link, index) => (
-                    <Link key={index} to={link.value}>
+                    <Link className="border-b-2 border-transparent hover:border-primary" key={index} to={link.value}>
                       <p className="py-2 hover:text-primary ">{link.name}</p>
                     </Link>
                   ))}
