@@ -20,18 +20,20 @@ collections:
         name: "index"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Banner do Topo, name: topBanner, widget: object, fields: 
-            [
-              {label: Título, name: title, widget: string},
-              {label: Subtítulo, name: subtitle, widget: string},
-              {label: Imagem de Fundo, name: bgImage, widget: image},
-              {label: "Camada no Fundo", name: "overlay", widget: "boolean"}
-              {label: Botão de ação, name: button, widget: object, fields:
-                [
-                  {label: Texto, name: buttonText, widget: string},
-                  {label: Link, name: buttonLink, widget: string},
-                ]}
-            ]}
+          - label: Banner do Topo
+            name: topBanner
+            widget: object
+            fields: 
+              - {label: Título, name: title, widget: string}
+              - {label: Subtítulo, name: subtitle, widget: string}
+              - {label: Imagem de Fundo, name: bgImage, widget: image}
+              - {label: "Camada no Fundo", name: "overlay", widget: "boolean"}
+              - label: Botão de ação
+                name: button
+                widget: object
+                fields:
+                  - {label: Texto, name: buttonText, widget: string}
+                  - {label: Link, name: buttonLink, widget: string}
           
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
