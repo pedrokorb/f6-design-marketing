@@ -14,6 +14,8 @@ public_folder: /img
 collections:
   - name: "pages"
     label: "Páginas"
+    editor:
+      preview: false
     files:
       - file: "src/pages/index.md"
         label: "Página Inicial"
@@ -310,7 +312,6 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "ID", name: id, widget: id}
       - {label: "Nome", name: name, widget: string}
       - {label: "Descrição", name: description, widget: string, required: false}
       - {label: "Ativo", name: active, widget: boolean, default: true}

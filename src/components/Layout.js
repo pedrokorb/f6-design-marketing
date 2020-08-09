@@ -4,17 +4,17 @@ import Footer from '../components/Footer/Footer'
 import NavBar from './Navbar/NavBar'
 import './all.sass'
 import './layout.css'
-import useSiteMetadata from './SiteMetadata'
+// import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+const TemplateWrapper = ({ children, seo, opengraph }) => {
+  // const { title, description } = useSiteMetadata()
   return (
     <div>
       <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <html lang="pt" />
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
 
         <link
           rel="apple-touch-icon"
@@ -42,11 +42,11 @@ const TemplateWrapper = ({ children }) => {
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={opengraph.title} />
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
+          content={opengraph.image.imageUrl.childImageSharp.fluid.src}
         />
       </Helmet>
       <NavBar />
