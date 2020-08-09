@@ -300,3 +300,17 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+
+  #Collection Categories
+  - label: "Categorias"
+    name: "categories"
+    folder: "_content/categories"
+    create: true
+    identifier_field: name
+    editor:
+      preview: false
+    fields:
+      - {label: "ID", name: id, widget: id}
+      - {label: "Nome", name: name, widget: string}
+      - {label: "Descrição", name: description, widget: string, required: false}
+      - {label: "Ativo", name: active, widget: boolean, default: true}
