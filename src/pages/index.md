@@ -49,6 +49,32 @@ servicesSection:
       icon:
         image: /img/certificate-1.svg
         imageAlt: Segurança
+partnersSection:
+  title: Parceiros
+  description: Essas empresas confiaram no nosso trabalho e hoje colhem os resultados
+  partners:
+    - name: Coca-Cola
+      link: https://www.cocacola.com.br/pt/home
+      image: /img/cocacola.png
+    - name: Petrobras
+      link: https://petrobras.com.br/pt/
+      image: /img/petrobras.png
+    - name: Banrisul
+      link: https://www.banrisul.com.br/
+      image: /img/banrisul.png
+contactSection:
+  title: Contato
+  description: Siga-nos nas redes sociais
+  contacts:
+    - title: Facebook
+      link: https://www.facebook.com/f6designemarketing
+      image: /img/facebook.png
+    - title: Instagram
+      link: https://www.instagram.com/f6designemarketing/
+      image: /img/instagram.png
+    - title: Whatsapp
+      link: https://www.facebook.com/f6designemarketing
+      image: /img/whatsapp.png
 seo:
   title: F6 Design e Marketing
   description: Identidade Visual e Marketing Digital para a sua empresa

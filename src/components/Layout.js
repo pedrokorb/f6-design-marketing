@@ -7,7 +7,7 @@ import './layout.css'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
 
-const TemplateWrapper = ({ children, seo, opengraph }) => {
+const TemplateWrapper = ({ children, seo, opengraph, contactSection }) => {
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -46,14 +46,15 @@ const TemplateWrapper = ({ children, seo, opengraph }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={opengraph ? opengraph.image.imageUrl.childImageSharp.fluid.src : `${withPrefix('/')}img/og-image.jpg`}
+          content={opengraph ? `${withPrefix('')}${opengraph.image.imageUrl.childImageSharp.fluid.src}` : `${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
       <NavBar />
       <div>{children}</div>
       <Footer 
-        title="Contato"
-        description="Siga-nos nas redes sociais"
+        title={contactSection.title}
+        description={contactSection.description}
+        contacts={contactSection.contacts}
       />
     </div>
   )

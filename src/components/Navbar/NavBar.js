@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import { FaAngleDown } from 'react-icons/fa'
 import Logo from '../../img/f6.svg'
 
+/* eslint-disable */
+
 const links = [
   {
     name: "Sobre",
@@ -66,8 +68,8 @@ const NavBar = () => {
             className={`duration-300 transition-all ${scrolled ? "w-16" : "w-24"}`} 
           />
         </Link>
-
-        <button
+      
+        <div
           className={`text-white outline-0 lg:hidden`}
           onClick={() => {
             setSidebarOpen(!sidebarOpen)
@@ -95,7 +97,7 @@ const NavBar = () => {
               />
             )
           } */}
-        </button>
+        </div>
       
         <div className="hidden lg:block">
           <div className={`flex text-white`}>

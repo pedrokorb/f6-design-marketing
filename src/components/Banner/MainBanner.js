@@ -32,7 +32,7 @@ const MainBanner = ({ overlay, imageSrc, title, subtitle, buttonText, buttonLink
         rounded
       />
 
-      <a className="mt-10" href="#services">
+      <a className="mt-10" aria-label="Services" href="#services">
         <FaAngleDown
           className="bounce h-16 w-16 text-primary"
         />

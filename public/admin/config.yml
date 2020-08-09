@@ -71,6 +71,34 @@ collections:
               - {label: "Camada no Fundo", name: "overlay", widget: "boolean"}
               - {label: Imagem de Fundo, name: bgImage, widget: image}
 
+          - label: Seção Parceiros
+            name: partnersSection
+            widget: object
+            fields: 
+              - {label: Título, name: title, widget: string}
+              - {label: Descrição, name: description, widget: string}
+              - label: "Parceiros" 
+                name: "partners" 
+                widget: "list" 
+                fields: 
+                  - {label: "Nome", name: "name", widget: "string"} 
+                  - {label: "Link", name: "link", widget: "string"} 
+                  - {label: Imagem, name: image, widget: image}
+          
+          - label: Seção Contato
+            name: contactSection
+            widget: object
+            fields: 
+              - {label: Título, name: title, widget: string}
+              - {label: Descrição, name: description, widget: string}
+              - label: Contatos
+                name: contacts
+                widget: list
+                fields:
+                  - {label: "Título", name: "title", widget: "string"} 
+                  - {label: "Imagem", name: "image", widget: "image"}
+                  - {label: "Link", name: "link", widget: "string"} 
+
           - label: "SEO"
             name: seo
             widget: "object"
@@ -257,20 +285,13 @@ collections:
         name: "config"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "config-page"}
-          - label: "Instagram" 
-            name: "instagram" 
-            widget: "object"
+          - label: Contatos
+            name: contacts
+            widget: list
             fields:
-              - {label: "Link Completo", name: "fullLink", widget: "string"}
-              - {label: "Username", name: "shortLink", widget: "string"}
-          - label: "Facebook" 
-            name: "facebook" 
-            widget: "object"
-            fields:
-              - {label: "Link Completo", name: "fullLink", widget: "string"}
-              - {label: "Username", name: "shortLink", widget: "string"}
-          - {label: "E-mail", name: "email", widget: "string"}
-          - {label: "Telefone", name: "phone", widget: "string"}
+              - {label: "Título", name: "title", widget: "string"} 
+              - {label: "Imagem", name: "image", widget: "image"}
+              - {label: "Link", name: "link", widget: "string"} 
           - {label: "Ícone da Navbar", name: "icon", widget: "image"}
       
       # - file: "src/pages/products/index.md"
@@ -303,15 +324,16 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
-  #Collection Categories
-  - label: "Categorias"
-    name: "categories"
-    folder: "_content/categories"
+  #Collection Portfolio
+  - name: "portfolio"
+    label: "Portfólio"
+    folder: "src/pages/portfolio"
     create: true
-    identifier_field: name
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - {label: "Nome", name: name, widget: string}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio-page"}
+      - {label: "Título", name: title, widget: string}
       - {label: "Descrição", name: description, widget: string, required: false}
-      - {label: "Ativo", name: active, widget: boolean, default: true}
+      

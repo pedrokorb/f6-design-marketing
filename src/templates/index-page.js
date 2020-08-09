@@ -1,51 +1,30 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-
-import Layout from '../components/Layout'
-import MainBanner from '../components/Banner/MainBanner'
+import PortfolioSection from '../components/PortfolioSection/PortfolioSection'
+import PartnersSection from '../components/ParternersSection/PartnersSection'
 import ServicesSection from '../components/ServicesSection/ServicesSection'
 import ImageToRight from '../components/CallToAction/ImageToRight'
-import PartnersSection from '../components/ParternersSection/PartnersSection'
-import PortfolioSection from '../components/PortfolioSection/PortfolioSection'
-
-import Computer from "../img/computer 1.svg"
-import Pen from "../img/pen 1.svg"
-import Trust from "../img/certificate 1.svg"
+import MainBanner from '../components/Banner/MainBanner'
+import Layout from '../components/Layout'
 
 const IndexPage = ({ data }) => {
   const { 
     topBanner,
     servicesSection,
     collectionPatiSection,
+    partnersSection,
+    contactSection,
     seo, 
-    opengraph 
+    opengraph
   } = data.markdownRemark.frontmatter
-
-  const services = [
-    {
-      icon: Computer,
-      title: "Marketing Digital",
-      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-    },
-    {
-      icon: Pen,
-      title: "Identidade Visual",
-      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-    },
-    {
-      icon: Trust,
-      title: "Segurança",
-      description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-    },
-  ]
 
   return (
     <Layout
       seo={seo}
       opengraph={opengraph}
+      contactSection={contactSection}
     >
-      
       <MainBanner
         imageSrc={topBanner.bgImage.childImageSharp.fluid.src}
         overlay={topBanner.overlay}
@@ -58,7 +37,7 @@ const IndexPage = ({ data }) => {
       <ServicesSection
         title={servicesSection.title}
         description={servicesSection.description}
-        services={services} //tratar svg imagens
+        services={servicesSection.services}
       />
 
       <ImageToRight
@@ -75,8 +54,9 @@ const IndexPage = ({ data }) => {
       />
 
       <PartnersSection
-        title="Parceiros"
-        description="Essas empresas confiaram no nosso trabalho e hoje colhem os resultados"
+        title={partnersSection.title}
+        description={partnersSection.description}
+        partners={partnersSection.partners}
       />
     </Layout>
   )
@@ -113,11 +93,7 @@ export const pageQuery = graphql`
             icon{
               imageAlt
               image {
-                childImageSharp {
-                  fluid(maxWidth: 2048, quality: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+                publicURL
               }
             }
           }
@@ -140,6 +116,36 @@ export const pageQuery = graphql`
             childImageSharp {
               fluid(maxWidth: 2048, quality: 100) {
                 ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        partnersSection{
+          title
+          description
+          partners{
+            name
+            link
+            image{
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+        contactSection{
+          title
+          description
+          contacts{
+            title
+            link
+            image{
+              childImageSharp {
+                fluid(maxWidth: 2048, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
               }
             }
           }
