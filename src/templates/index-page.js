@@ -48,11 +48,6 @@ const IndexPage = ({ data }) => {
         backgroundImage={collectionPatiSection.bgImage.childImageSharp.fluid.src}
       />
 
-      {/* <PortfolioSection
-        title="Portfólio"
-        description="Conheça alguns dos trabalhos já realizados"
-      /> */}
-
       <PartnersSection
         title={partnersSection.title}
         description={partnersSection.description}
