@@ -21,10 +21,7 @@ const IndexPage = ({ data }) => {
   } = data.markdownRemark.frontmatter
 
   return (
-    <Layout
-      seo={seo}
-      opengraph={opengraph}
-    >
+    <Layout seo={seo} opengraph={opengraph}>
       <MainBanner
         imageSrc={topBanner.bgImage.childImageSharp.fluid.src}
         overlay={topBanner.overlay}
@@ -45,7 +42,9 @@ const IndexPage = ({ data }) => {
         description={collectionPatiSection.description}
         image={collectionPatiSection.mainImage.image.childImageSharp.fluid.src}
         overlay={collectionPatiSection.overlay}
-        backgroundImage={collectionPatiSection.bgImage.childImageSharp.fluid.src}
+        backgroundImage={
+          collectionPatiSection.bgImage.childImageSharp.fluid.src
+        }
       />
 
       <PartnersSection
@@ -54,6 +53,11 @@ const IndexPage = ({ data }) => {
         partners={partnersSection.partners}
       />
 
+      {/* <PortfolioSection
+        title="Portfólio"
+        description="Conheça alguns dos trabalhos já realizados"
+      /> */}
+      
       <Footer
         title={contactSection.title}
         description={contactSection.description}
