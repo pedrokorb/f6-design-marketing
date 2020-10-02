@@ -53,11 +53,7 @@ const IndexPage = ({ data }) => {
         partners={partnersSection.partners}
       />
 
-      {/* <PortfolioSection
-        title="Portfólio"
-        description="Conheça alguns dos trabalhos já realizados"
-      /> */}
-      
+
       <Footer
         title={contactSection.title}
         description={contactSection.description}
